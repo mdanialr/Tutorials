@@ -12,7 +12,7 @@ _remove service (eg. http, https)_
 $ sudo firewall-cmd --zone=public --permanent --remove-service=http
 $ sudo firewall-cmd --zone=public --permanent --remove-service=https
 ```
-_block specific ip_
+_block specific ip (eg. 3.3.3.3)_
 ```
 $ sudo firewall-cmd --permanent --zone=drop --add-source=3.3.3.3
 ```
