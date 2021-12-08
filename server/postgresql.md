@@ -21,7 +21,7 @@ $ sudo systemctl enable postgresql.service
 $ sudo setsebool -P httpd_can_network_connect_db 1
 $ sudo systemctl restart postgresql
 ```
-## in /var/lib/pgsql/data/pg_hba.conf
+- ## in /var/lib/pgsql/data/pg_hba.conf
 ```
 $ sudo vim /var/lib/pgsql/data/pg_hba.conf
 ```
@@ -34,7 +34,7 @@ $ sudo systemctl restart postgresql
 ```
 $ sudo -u postgres psql
 ```
-## in PostgreSQL Console
+_in PostgreSQL Console_
 > **Note**: if you need user can be accessed by another host other than this machine or you need to access this database from another network, **change** _'localhost'_ to _'%'_ to accept connection from all network so it can be accessed.
 ```
 postgres=# CREATE DATABASE dbname OWNER username;

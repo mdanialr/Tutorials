@@ -12,7 +12,7 @@ $ sudo systemctl status mariadb
 ```
 $ sudo mariadb -u root -p
 ```
-## in MariaDB Console
+_in MariaDB Console_
 > **Notes**: if you need user can be accessed by another host other than this machine or you need to access this database from another network, **change** _'localhost'_ to _'%'_ to accept connection from all network so it can be accessed.
 ```
 MariaDB [(none)]> use mysql;
