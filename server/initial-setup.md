@@ -42,3 +42,5 @@ head to <a href="./server/php.md" target="_blank">this</a> link.
 MariaDB : head to <a href="./server/mariadb.md" target="_blank">this</a> link.
 
 PostgreSQL : head to <a href="./server/postgresql.md" target="_blank">this</a> link.
+# Install & Config Nginx Web Server
+head to <a href="./server/nginx.md" target="_blank">this</a> link.
