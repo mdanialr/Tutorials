@@ -36,3 +36,6 @@ $ sudo firewall-cmd --zone=public --list-all
 ```
 ## Example Configuration
 head to <a href="./server/example-firewall-config.md" target="_blank">this</a> link.
+
+# Install PHP
+head to <a href="./server/php.md" target="_blank">this</a> link.
