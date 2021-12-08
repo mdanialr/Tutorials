@@ -38,5 +38,7 @@ $ sudo firewall-cmd --zone=public --list-all
 head to <a href="./server/example-firewall-config.md" target="_blank">this</a> link.
 # Install PHP
 head to <a href="./server/php.md" target="_blank">this</a> link.
-# Install MariaDB
-head to <a href="./server/mariadb.md" target="_blank">this</a> link.
+# Install Database
+MariaDB : head to <a href="./server/mariadb.md" target="_blank">this</a> link.
+
+PostgreSQL : head to <a href="./server/postgresql.md" target="_blank">this</a> link.
