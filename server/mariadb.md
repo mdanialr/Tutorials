@@ -30,3 +30,28 @@ mysql> GRANT ALL PRIVILEGES ON DATABASE_NAME.* TO 'USER_NAME'@'localhost' IDENTI
 $ sudo mariadb-dump --opt -u username -p database-name > backup-file-name
 $ sudo mariadb -u root -p database-name < backup-file-name
 ```
+# Reset Password User **root**
+```
+$ sudo systemctl stop mariadb
+$ sudo mariadbd --skip-grant-tables --user=mysql &
+```
+_in new terminal_
+```
+$ sudo mariadb -u root
+```
+_in MariaDB Console_
+```
+MariaDB [(none)]> use mysql;
+MariaDB [mysql]> ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_passowrd';
+```
+> **Note**: if there is error password not meet requirements, then set requirements to LOW:
+```
+MariaDB [mysql]> SHOW VARIABLES LIKE 'validate_password%';
+MariaDB [mysql]> SET GLOBAL validate_password_policy=LOW;
+## then try to change the password again
+MariaDB [mysql]> ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_passowrd';
+```
+then reboot the machine
+```
+$ sudo reboot
+```
