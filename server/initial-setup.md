@@ -5,7 +5,7 @@
 # usermod -aG wheel username
 ```
 # SSH
-head to [this](/server/ssh.md) link.
+head to <a href="./server/ssh.md" target="_blank">this</a> link.
 # First-time Command
 ```
 $ sudo dnf update
@@ -35,5 +35,4 @@ $ sudo firewall-cmd --reload
 $ sudo firewall-cmd --zone=public --list-all
 ```
 ## Example Configuration
-head to [this](/server/example-firewall-config.md) link.
-
+head to <a href="./server/example-firewall-config.md" target="_blank">this</a> link.
