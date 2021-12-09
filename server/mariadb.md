@@ -8,6 +8,10 @@ $ sudo systemctl enable mariadb --now
 $ sudo systemctl status mariadb
 $ sudo mariadb-secure-installation
 ```
+## Allow DB Connection from php-fpm in SELinux
+```
+$ sudo setsebool -P httpd_can_network_connect_db 1
+```
 # Create New DB & User
 ```
 $ sudo mariadb -u root -p
