@@ -28,6 +28,8 @@ $ composer
 ```
 ## Optional
 _to make 'composer' can be executed using sudo_
+```
 $ sudo ln -s /usr/local/bin/composer /usr/bin/
 $ composer
 $ sudo composer
+```
