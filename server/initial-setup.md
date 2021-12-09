@@ -5,7 +5,7 @@
 # usermod -aG wheel username
 ```
 # SSH
-head to <a href="./server/ssh.md" target="_blank">this</a> link.
+head to <a href="./ssh.md" target="_blank">this</a> link.
 # First-time Command
 ```
 $ sudo dnf update
@@ -35,12 +35,14 @@ $ sudo firewall-cmd --reload
 $ sudo firewall-cmd --zone=public --list-all
 ```
 ## Example Configuration
-head to <a href="./server/example-firewall-config.md" target="_blank">this</a> link.
+head to <a href="./example-firewall-config.md" target="_blank">this</a> link.
 # Install PHP
-head to <a href="./server/php.md" target="_blank">this</a> link.
+head to <a href="./php.md" target="_blank">this</a> link.
 # Install Database
-MariaDB : head to <a href="./server/mariadb.md" target="_blank">this</a> link.
+MariaDB : head to <a href="./mariadb.md" target="_blank">this</a> link.
 
-PostgreSQL : head to <a href="./server/postgresql.md" target="_blank">this</a> link.
+PostgreSQL : head to <a href="./postgresql.md" target="_blank">this</a> link.
 # Install & Config Nginx Web Server
-head to <a href="./server/nginx.md" target="_blank">this</a> link.
+head to <a href="./nginx.md" target="_blank">this</a> link.
+# Install & Host Laravel Webapp
+head to <a href="./laravel.md" target="_blank">this</a> link.
