@@ -21,3 +21,13 @@ $ sudo dnf install php-mysqlnd  -y
 ```
 # Install Composer
 head to <a href="https://getcomposer.org/download/" target="_blank">this</a> link.
+
+verify install with:
+```
+$ composer
+```
+## Optional
+_to make 'composer' can be executed using sudo_
+$ sudo ln -s /usr/local/bin/composer /usr/bin/
+$ composer
+$ sudo composer
