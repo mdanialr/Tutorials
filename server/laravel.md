@@ -63,7 +63,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 ## How to Use Script (example)
-### Save both scripts in `home/scripts` directory.
+### Save both scripts in `home/username/scripts` directory.
 ```
 $ sudo vim /home/username/scripts/selinux-laravel
 ```
@@ -78,7 +78,7 @@ $ sudo vim /home/username/scripts/vhost-nginx-laravel
 $ cd /home/username/scripts
 $ sudo ./selinux-laravel
 ```
-- Fill in 'Root dir:' with where the laravel root project exist. e.g. `/var/www/example-project`. **Note**: without trailing slash.
+- Fill in **'Root dir:'** with where the laravel root project exist. e.g. `/var/www/example-project`. **Note**: without trailing slash.
 ```
 $ cd /home/username/scripts
 $ sudo ./vhost-nginx-laravel
