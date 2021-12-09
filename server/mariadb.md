@@ -4,9 +4,9 @@ _change '__x__' to the desired version e.g. 3 or 5_
 $ sudo dnf module list mariadb
 $ sudo dnf module enable mariadb:10.x -y
 $ sudo dnf install mariadb-server -y
-$ sudo mariadb-secure-installation
 $ sudo systemctl enable mariadb --now
 $ sudo systemctl status mariadb
+$ sudo mariadb-secure-installation
 ```
 # Create New DB & User
 ```
