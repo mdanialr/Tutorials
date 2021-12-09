@@ -40,7 +40,7 @@ _in new terminal_
 ```
 $ sudo mariadb -u root
 ```
-_in MariaDB Console_
+_then in MariaDB Console_
 ```
 MariaDB [(none)]> use mysql;
 MariaDB [mysql]> ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_passowrd';
