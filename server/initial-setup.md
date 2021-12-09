@@ -12,6 +12,7 @@ $ sudo dnf update
 ```
 # Some Utilities
 ```
+$ sudo dnf install epel-release -y
 $ sudo dnf install bash-completion vim epel-release unzip wget git htop -y
 ```
 # Firewall
