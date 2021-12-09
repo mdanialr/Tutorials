@@ -19,7 +19,6 @@ $ sudo systemctl enable postgresql.service
 ## Allow DB Connection from php-fpm in SELinux
 ```
 $ sudo setsebool -P httpd_can_network_connect_db 1
-$ sudo systemctl restart postgresql
 ```
 - ## in /var/lib/pgsql/data/pg_hba.conf
 ```
