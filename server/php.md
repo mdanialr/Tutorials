@@ -7,7 +7,7 @@ $ sudo dnf install php
 ```
 # Laravel Dependencies
 ```
-$ sudo dnf install php-{fpm,opcache,curl,common,xml,mbstring,json,zip,cli} -y
+$ sudo dnf install php-{fpm,opcache,curl,common,xml,mbstring,json,zip,cli,gd} -y
 $ sudo systemctl enable php-fpm --now
 ```
 # Database Driver
