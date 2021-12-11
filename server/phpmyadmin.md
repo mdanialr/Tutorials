@@ -5,6 +5,8 @@
 $ cd /opt
 $ sudo composer create-project phpmyadmin/phpmyadmin phpmyadmin
 $ sudo chown :nginx -R phpmyadmin
+$ cd phpmyadmin
+$ sudo composer update # optional
 ```
 - copy config file
 ```
