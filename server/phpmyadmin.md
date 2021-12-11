@@ -4,9 +4,14 @@
 ```
 $ cd /opt
 $ sudo composer create-project phpmyadmin/phpmyadmin phpmyadmin
-$ sudo chown :nginx -R phpmyadmin
 $ cd phpmyadmin
 $ sudo composer update # optional
+```
+- permissions
+```
+$ cd /opt
+$ sudo chown :nginx -R phpmyadmin
+$ sudo chown :nginx -R /var/lib/php/session
 ```
 - copy config file
 ```
