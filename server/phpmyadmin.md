@@ -19,8 +19,6 @@ $ sudo vim config.inc.php
 - change to these values
 > $cfg['blowfish_secret'] = 'paste-generated-blowfish-value-here';
 
-> $cfg['Servers'][$i]['host'] = 'localhost';
-
 > $cfg['TempDir'] = '/tmp';
 
 - Nginx vHost
