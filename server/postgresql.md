@@ -36,8 +36,8 @@ $ sudo -u postgres psql
 _in PostgreSQL Console_
 > **Note**: if you need user can be accessed by another host other than this machine or you need to access this database from another network, **change** _'localhost'_ to _'%'_ to accept connection from all network so it can be accessed.
 ```
-postgres=# CREATE DATABASE dbname OWNER username;
 postgres=# CREATE ROLE username WITH LOGIN ENCRYPTED PASSWORD 'thepassword';
+postgres=# CREATE DATABASE dbname OWNER username;
 postgres=# \c dbname;
 dbname=# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO username;
 dbname=# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO username;
