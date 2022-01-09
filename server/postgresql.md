@@ -1,3 +1,7 @@
+# More Up-to-date
+head to <a href="https://www.postgresql.org/download/linux/redhat/" target="_blank">this</a> link.
+
+Continue for more detailed instructions.
 # Install Repository RPM:
 ```
 $ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
