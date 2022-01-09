@@ -15,6 +15,10 @@ $ sudo dnf update
 $ sudo dnf install epel-release -y
 $ sudo dnf install bash-completion vim epel-release unzip wget git htop -y
 ```
+if error install epel-release run:
+```
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+```
 # Firewall
 ```
 $ sudo dnf install firewalld
