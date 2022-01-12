@@ -76,5 +76,5 @@ $ sudo -u postgres pg_dump dbname > dumpfilename
 ```
 - Restore
 ```
-$ sudo -u postgres psql -d newdbname -f dumpfilename
+$ sudo -u postgres psql -d newdbname < dumpfilename
 ```
