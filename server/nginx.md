@@ -21,6 +21,8 @@ _change to these values_
 
 > listen.mode = 0666
 
+> listen.acl_users = apache,nginx
+
 > security.limit_extensions = .php .php3 .php4 .php5 .php7
 
 - ### in /etc/php.ini
