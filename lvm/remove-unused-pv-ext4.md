@@ -2,32 +2,32 @@
 
 ## Unmount the file system
 ```
-sudo umount /dev/mapper/the-lv-name
+sudo umount /mount/point/of/the/LV_path
 ```
 
 ## Check the file system for any Errors
 ```
-sudo e2fsck -f /dev/mapper/the-lv-name
+sudo e2fsck -f /LV_path
 ```
 
 ## Shrink the FS. maybe to 5G
 ```
-sudo resize2fs /dev/mapper/the-lv-name 5G
+sudo resize2fs /LV_path 5G
 ```
 
 ## Reduce LV size. maybe to 5G
 ```
-sudo lvreduce -L 5G /dev/mapper/the-lv-name
+sudo lvreduce -L 5G /LV_path
 ```
 
 ## ReCheck any FS errors
 ```
-sudo e2fsck -f /dev/mapper/the-lv-name
+sudo e2fsck -f /LV_path
 ```
 
 ## Remount the already shrinked FS
 ```
-sudo mount /dev/mapper/the-lv-name
+sudo mount /LV_path
 ```
 
 ## Make sure PV not used

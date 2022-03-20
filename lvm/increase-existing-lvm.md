@@ -46,20 +46,20 @@ sudo vgextend name-of-the-vg /dev/vdXX
 ## Extend existing target LV from just now extended VG
 give all remaining free size of the VG
 ```
-sudo lvextend -l +100%FREE /dev/name-of/the-lv
+sudo lvextend -l +100%FREE /LV_path
 ```
-or just some size maybe 10GB using
+or just some size. maybe 10GB
 ```
-sudo lvextend -L+10G /dev/name-of/the-lv
+sudo lvextend -L +10G /LV_path
 ```
 
 ## Resize just now extended LV
 ```
-sudo xfs_growfs /dev/name-of/the-lv
+sudo xfs_growfs /LV_path
 ```
 or if using `ext4` filesystem use this instead
 ```
-sudo resize2fs /dev/name-of/the-lv
+sudo resize2fs /LV_path
 ```
 
 ## Check the new size
