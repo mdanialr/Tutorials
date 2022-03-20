@@ -1,4 +1,4 @@
-# Case 1 - Increase LVM size (One existing Disk then add another new Disk)
+# Increase LVM size (One existing Disk then add another new Disk)
 ![LVM images](https://user-images.githubusercontent.com/48054961/159128814-a58e429d-3c8c-4373-a366-8e39cde68eea.png)
 ## Display PV (Physical Volume)
 ```
