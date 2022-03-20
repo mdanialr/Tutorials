@@ -46,7 +46,7 @@ sudo vgextend name-of-the-vg /dev/vdXX
 ## Extend existing target LV from just now extended VG
 give all remaining free size of the VG
 ```
-sudo lvm lvextend -l +100%FREE /dev/name-of/the-lv
+sudo lvextend -l +100%FREE /dev/name-of/the-lv
 ```
 or just some size maybe 10GB using
 ```
