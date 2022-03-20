@@ -27,7 +27,7 @@ sudo e2fsck -f /LV_path
 
 ## Remount the already shrinked FS
 ```
-sudo mount /LV_path
+sudo mount /LV_path /mount/point/name
 ```
 
 ## Make sure PV not used
