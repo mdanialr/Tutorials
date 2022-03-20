@@ -57,6 +57,10 @@ sudo lvextend -L+10G /dev/name-of/the-lv
 ```
 sudo xfs_growfs /dev/name-of/the-lv
 ```
+or if using `ext4` filesystem use this instead
+```
+sudo resize2fs /dev/name-of/the-lv
+```
 
 ## Check the new size
 ```
