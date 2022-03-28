@@ -2,26 +2,26 @@
 ### **Note**: Make sure php-fpm already installed.
 - install in `/opt/`
 ```
-$ cd /opt
-$ sudo composer create-project phpmyadmin/phpmyadmin phpmyadmin
-$ cd phpmyadmin
-$ sudo composer update # optional
+cd /opt
+sudo composer create-project phpmyadmin/phpmyadmin phpmyadmin
+cd phpmyadmin
+sudo composer update # optional
 ```
 - permissions
 ```
-$ cd /opt
-$ sudo chown :nginx -R phpmyadmin
-$ sudo chown :nginx -R /var/lib/php/session
+cd /opt
+sudo chown :nginx -R phpmyadmin
+sudo chown :nginx -R /var/lib/php/session
 ```
 - copy config file
 ```
-$ cd /opt/phpmyadmin
-$ sudo cp config.sample.inc.php config.inc.php
+cd /opt/phpmyadmin
+sudo cp config.sample.inc.php config.inc.php
 ```
 - generate blowfish value. eg. from [here](https://phpsolved.com/phpmyadmin-blowfish-secret-generator/).
 - open up config.inc.php
 ```
-$ sudo vim config.inc.php
+sudo vim config.inc.php
 ```
 - change to these values
 > $cfg['blowfish_secret'] = 'paste-generated-blowfish-value-here';

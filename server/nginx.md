@@ -1,14 +1,14 @@
 # Install Nginx
 ```
-$ sudo dnf install nginx -y
-$ sudo systemctl enable nginx --now
-$ sudo systemctl status nginx
+sudo dnf install nginx -y
+sudo systemctl enable nginx --now
+sudo systemctl status nginx
 ```
 # Config Reverse Proxy
 ## PHP Reverse Proxy: php-fpm
 - ### in /etc/php-fpm.d/www.conf
 ```
-$ sudo vim /etc/php-fpm.d/www.conf
+sudo vim /etc/php-fpm.d/www.conf
 ```
 _change to these values_
 > user = nginx
@@ -27,12 +27,12 @@ _change to these values_
 
 - ### in /etc/php.ini
 ```
-$ sudo vim /etc/php.ini
+sudo vim /etc/php.ini
 ```
 _change to these values_
 > date.timezone = Asia/Jakarta
 
 > cgi.fix_pathinfo=0
 ```
-$ sudo systemctl restart php-fpm
+sudo systemctl restart php-fpm
 ```

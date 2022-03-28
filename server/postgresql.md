@@ -4,38 +4,38 @@ head to <a href="https://www.postgresql.org/download/linux/redhat/" target="_bla
 Continue for more detailed instructions.
 # Install Repository RPM:
 ```
-$ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 ```
 # Install PostgreSQL:
 _change '__x__' to the desired version e.g. 13 or 14_
 ```
-$ sudo dnf module list postgresql
-$ sudo dnf module enable postgresql:x -y
-$ sudo dnf install postgresql-server -y
+sudo dnf module list postgresql
+sudo dnf module enable postgresql:x -y
+sudo dnf install postgresql-server -y
 ```
 # Post-installation
 > Due to policies for Red Hat family distributions, the PostgreSQL installation will not be enabled for automatic start or have the database initialized automatically. To make your database installation complete, you need to perform the following steps, based on your distribution: 
 ```
-$ sudo postgresql-setup --initdb
-$ sudo systemctl enable postgresql.service
+sudo postgresql-setup --initdb
+sudo systemctl enable postgresql --now
 ```
-> **Note**: if there is error not empty use '$ sudo rm -rf /var/lib/pgsql/data'
+> **Note**: if there is error not empty use 'sudo rm -rf /var/lib/pgsql/data'
 ## Allow DB Connection from php-fpm in SELinux
 ```
-$ sudo setsebool -P httpd_can_network_connect_db 1
+sudo setsebool -P httpd_can_network_connect_db 1
 ```
 - ## in /var/lib/pgsql/data/pg_hba.conf
 ```
-$ sudo vim /var/lib/pgsql/data/pg_hba.conf
+sudo vim /var/lib/pgsql/data/pg_hba.conf
 ```
 _use md5 password instead ident_
 > host all all 127.0.0.1/32 md5
 ```
-$ sudo systemctl restart postgresql
+sudo systemctl restart postgresql
 ```
 # Create New DB & Role
 ```
-$ sudo -u postgres psql
+sudo -u postgres psql
 ```
 _in PostgreSQL Console_
 > **Note**: if you need user can be accessed by another host other than this machine or you need to access this database from another network, **change** _'localhost'_ to _'%'_ to accept connection from all network so it can be accessed.
@@ -51,30 +51,30 @@ dbname=# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO username;
 ## All Databases
 - Backup
 ```
-$ sudo -u postgres pg_dumpall --clean --no-owner > dumpfilename
+sudo -u postgres pg_dumpall --clean --no-owner > dumpfilename
 ```
 - Restore
 ```
-$ sudo -u postgres psql postgres < dumpfilename
+sudo -u postgres psql postgres < dumpfilename
 ```
 ## Exclude Some Databases
 - Backup
 
 _change **db1** & **db3** to the desired database_
 ```
-$ sudo -u postgres pg_dumpall --clean --no-owner --exclude-database=db1 --exclude-database=db3 > dumpfilename
+sudo -u postgres pg_dumpall --clean --no-owner --exclude-database=db1 --exclude-database=db3 > dumpfilename
 ```
 - Restore
 ```
-$ sudo -u postgres psql postgres < dumpfilename
+sudo -u postgres psql postgres < dumpfilename
 ```
 > **Note**: you can add _--exclude-database=dbname_ as many as you needed
 # Only One Database
 - Backup
 ```
-$ sudo -u postgres pg_dump dbname > dumpfilename
+sudo -u postgres pg_dump dbname > dumpfilename
 ```
 - Restore
 ```
-$ sudo -u postgres psql -d newdbname < dumpfilename
+sudo -u postgres psql -d newdbname < dumpfilename
 ```
