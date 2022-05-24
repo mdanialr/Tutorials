@@ -33,3 +33,15 @@ sudo ln -s /usr/local/bin/composer /usr/bin/
 composer
 sudo composer
 ```
+## Increase PHP max upload size
+in **php.ini** file
+> Example in RockyLinux
+```bash
+/etc/php.ini
+/etc/opt/remi/php7x/php.ini
+```
+look for these two keys and change the values:
+```ini
+upload_max_filesize = 50M
+post_max_size = 50M
+```

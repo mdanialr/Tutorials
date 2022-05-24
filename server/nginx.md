@@ -36,3 +36,23 @@ _change to these values_
 ```
 sudo systemctl restart php-fpm
 ```
+
+# Increase Max Upload Size
+Use the http, server, or location block to edit client_max_body_size:
+```nginx
+http {
+    ...
+    client_max_body_size 50M;
+}
+
+server {
+    ...
+    client_max_body_size 50M;
+}
+
+location /uploads {
+    ...
+    client_max_body_size 50M;
+}
+```
+Edit the file in `/etc/nginx/nginx.conf` to set the default size for all vHost then set in `server` block to set the more specific size.
