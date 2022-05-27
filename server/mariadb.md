@@ -35,6 +35,13 @@ mysql> GRANT ALL PRIVILEGES ON DATABASE_NAME.* TO 'USER_NAME'@'localhost' IDENTI
 sudo mariadb-dump --opt -u username -p database-name > backup-file-name
 sudo mariadb -u root -p database-name < backup-file-name
 ```
+## in Docker Container
+```bash
+# Backup
+docker exec -t container_name mariadb-dump --opt -u root -p[password] database-name > backup-file-name
+# Restore
+docker exec -i container_name mariadb -u root -p[password] database-name < backup-file-name
+```
 # Reset Password User **root**
 ```
 sudo systemctl stop mariadb

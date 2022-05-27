@@ -78,3 +78,12 @@ sudo -u postgres pg_dump dbname > dumpfilename
 ```
 sudo -u postgres psql -d newdbname < dumpfilename
 ```
+## in Docker Container
+- Backup
+```bash
+docker exec -t container_name pg_dump -U postgres dbname > dumpfilename
+```
+- Restore
+```bash
+docker exec -i container_name psql -U postgres -d newdbname < dumpfilename
+```
